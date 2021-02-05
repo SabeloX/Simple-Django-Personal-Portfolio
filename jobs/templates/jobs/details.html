@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sabelo Mtetwa</title>
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <meta name="theme-color" content="#7952b3">
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Job Details</h1>
+                        <p class="lead text-muted">{{ job.summary }}</p>
+                        <p>
+                        <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+                        </p>
+                        <img src="{{ job.image.url }}" height=550 />
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
